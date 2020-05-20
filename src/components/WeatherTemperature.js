@@ -15,14 +15,14 @@ const getWeatherIcon = (weatherState) => {
   if(icon){
     return (
       <WeatherIcons 
-      name = '' 
+      name = {icon}
       size = '2x'
       />
     )
   } else{
     return (
       <WeatherIcons 
-        name = 'day-sunny' 
+        name = {'sun'} 
         size = '2x'
       />
     )

@@ -6,8 +6,8 @@ const WeatherData = () => {
   return (
     <div>
       <WeatherTemperature 
-        temperature = {20}
-        weatherState = {''}
+        temperature = '30'
+        weatherState = 'rain'
       />
       <WeatherExtraInfo
         humidity = '80'
