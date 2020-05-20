@@ -1,6 +1,7 @@
 import React from "react";
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherExtraInfo from "./WeatherExtraInfo";
+
 import {
   CLOUD,
   CLOUDY,
