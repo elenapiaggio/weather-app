@@ -15,7 +15,7 @@ const WeatherData = () => {
   return (
     <div>
       <WeatherTemperature 
-        temperature = 'treinta'
+        temperature = {30}
         weatherState = {WINDY}
       />
       <WeatherExtraInfo
