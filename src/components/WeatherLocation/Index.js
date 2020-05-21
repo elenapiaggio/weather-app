@@ -19,8 +19,8 @@ const data = {
 }
 
 class WeatherLocation extends Component {
-  constructor(props){
-    super(props);
+  constructor(){
+    super();
     this.state = {
       city: 'Barcelona',
       data: data,
