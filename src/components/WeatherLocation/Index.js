@@ -24,7 +24,9 @@ const WeatherLocation = () => {
       <Location 
         city = {'Barcelona'}
       />
-      <WeatherData />
+      <WeatherData 
+        data={data}
+      />
     </div>
   );
 };
