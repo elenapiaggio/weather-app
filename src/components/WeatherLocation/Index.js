@@ -19,15 +19,27 @@ const data = {
 }
 
 class WeatherLocation extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      city: 'Barcelona',
+      data: data,
+    }
+  }
+
   handleUpdateClick = () => {
     console.log('handleUpdate clicked');
+    this.setState({
+      city: 'Lima'
+    })
   }
 
   render() {
+    const { city, data } = this.state;
     return (
       <div className='weatherLocationCont'>
       <Location 
-        city = {'Barcelona'}
+        city = {city}
       />
       <WeatherData 
         data={data}
