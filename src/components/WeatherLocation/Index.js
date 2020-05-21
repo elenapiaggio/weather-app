@@ -19,6 +19,10 @@ const data = {
 }
 
 class WeatherLocation extends Component {
+  handleUpdateClick = () => {
+    console.log('handleUpdate clicked');
+  }
+
   render() {
     return (
       <div className='weatherLocationCont'>
@@ -28,6 +32,7 @@ class WeatherLocation extends Component {
       <WeatherData 
         data={data}
       />
+      <button onClick = {this.handleUpdateClick} >Update</button>
     </div>
     )
   }
