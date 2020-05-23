@@ -3,29 +3,14 @@ import Location from "./Location";
 import WeatherData from "./WeatherData/Index";
 import transformWeather from "../services/transformWeather";
 import "./index.css";
-import {
-  CLOUD,
-  CLOUDY,
-  SUN,
-  RAIN,
-  SNOW,
-  WINDY,
-} from "../../constants/weathers";
 import { api_weather } from "../../constants/api_url";
-
-const data = {
-  temperature: 5,
-  weatherState: SUN,
-  humidity: 10,
-  wind: "10",
-};
 
 class WeatherLocation extends Component {
   constructor() {
     super();
     this.state = {
       city: "Barcelona",
-      data: data,
+      data: null,
     };
   }
 
