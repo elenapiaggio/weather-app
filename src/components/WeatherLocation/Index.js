@@ -14,6 +14,7 @@ class WeatherLocation extends Component {
     };
   }
 
+  
   handleUpdateClick = () => {
     fetch(api_weather)
       .then((resolve) => {
@@ -33,7 +34,7 @@ class WeatherLocation extends Component {
     return (
       <div className="weatherLocationCont">
         <Location city={city} />
-        <WeatherData data={data} />
+        {data ? <WeatherData data={data} /> : "Loading ..."}
         <button onClick={this.handleUpdateClick}>Update</button>
       </div>
     );
