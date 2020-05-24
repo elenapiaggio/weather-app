@@ -14,7 +14,6 @@ const convertTempKelvinToCelsius = (kelvin) => {
 };
 
 const getWeatherState = (weather) => {
-  console.log('recibo getWeatherState, el weather: ', weather.id);
   const { id } = weather;
   if ( id < 300 ){
     return THUNDER
