@@ -7,8 +7,10 @@ import "./index.css";
 import { api_weather } from "../../constants/api_url";
 
 class WeatherLocation extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    const {city} = props;
+    
     this.state = {
       city: "Barcelona",
       data: null,
