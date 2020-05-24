@@ -17,6 +17,8 @@ In the project directory, you can run:
 - Html
 - Css
 - Surge.sh
+- [Weather Library](https://erikflowers.github.io/weather-icons/)
+- [Weather API](https://openweathermap.org/api)
 
 ## Git repo
 The url to repository and deployed project:

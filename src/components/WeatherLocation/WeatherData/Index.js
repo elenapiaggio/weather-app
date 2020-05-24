@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherExtraInfo from "./WeatherExtraInfo";
 import "./index.css";
-import weatherService from "../../services/openWeatherService";
 
 const WeatherData = ({
   data: { temperature, weatherState, humidity, wind },
