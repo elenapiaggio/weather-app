@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import CircularProgress from '@material-ui/core/CircularProgress'
+import CircularProgress from '@material-ui/core/CircularProgress';
+import PropTypes from "prop-types";
 import Location from "./Location";
 import WeatherData from "./WeatherData/Index";
 import transformWeather from "../services/transformWeather";
@@ -10,9 +11,9 @@ class WeatherLocation extends Component {
   constructor(props) {
     super(props);
     const {city} = props;
-    
+
     this.state = {
-      city: "Barcelona",
+      city,
       data: null,
     };
   }
@@ -44,6 +45,10 @@ class WeatherLocation extends Component {
       </div>
     );
   }
+}
+
+WeatherLocation.propTypes = {
+  city: PropTypes.string.isRequired,
 }
 
 export default WeatherLocation;
