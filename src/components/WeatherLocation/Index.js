@@ -38,7 +38,6 @@ class WeatherLocation extends Component {
       <div className="weatherLocationCont">
         <Location city={city} />
         {data ? <WeatherData data={data} /> : "Loading ..."}
-        <button onClick={this.handleUpdateClick}>Update</button>
       </div>
     );
   }
