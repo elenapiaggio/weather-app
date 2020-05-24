@@ -41,6 +41,9 @@ class App extends Component {
               />
             </Col>
             <Col xs={12} md={6}>
+              <Paper elevation={4}>
+                <div className = 'details'></div>
+              </Paper>
               <div className = 'details'> Info Extended </div>
             </Col>
           </Row>

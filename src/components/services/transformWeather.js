@@ -10,7 +10,7 @@ import {
 } from "../../constants/weathers";
 
 const convertTempKelvinToCelsius = (kelvin) => {
-  return Number(convert(kelvin).from("K").to("C").toFixed(1));
+  return Number(convert(kelvin).from("K").to("C").toFixed(0));
 };
 
 const getWeatherState = (weather) => {
