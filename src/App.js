@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <Grid>
-          <Row>Title</Row>
+          <Row>Navigation Bar</Row>
           <Row>
             <Col xs={12} md={6}>
               <LocationList
@@ -28,7 +28,7 @@ class App extends Component {
               />
             </Col>
             <Col xs={12} md={6}>
-              <div className = 'details'> hola que ae</div>
+              <div className = 'details'> Info Extended </div>
             </Col>
           </Row>
         </Grid>
