@@ -6,7 +6,9 @@ import WeatherLocation from './components/WeatherLocation/Index';
 function App() {
   return (
     <div className="App">
-      <WeatherLocation/>
+      <WeatherLocation
+        city = 'Barcelona, bcn'
+      />
     </div>
   );
 }
