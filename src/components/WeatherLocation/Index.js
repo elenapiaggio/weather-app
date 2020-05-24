@@ -14,7 +14,10 @@ class WeatherLocation extends Component {
     };
   }
 
-  
+  componentDidMount(){
+    this.handleUpdateClick();
+  }
+
   handleUpdateClick = () => {
     fetch(api_weather)
       .then((resolve) => {
