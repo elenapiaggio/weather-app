@@ -18,11 +18,19 @@ const cities = [
 ];
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      city: 'New City'
+    }
+  }
+
   handleSelectednLocation = (city) => {
     console.log(`handleSElectionLocation ${city}`);
   };
 
   render() {
+    const {city} = this.state;
     return (
       <div className="App">
         <Grid>
@@ -46,7 +54,7 @@ class App extends Component {
               <Paper elevation={4}>
                 <div className = 'details'>
                   <ForecastExtended
-                    city = {'Barcelona, es'}
+                    city = {city}
                   />
                 </div>
               </Paper>
