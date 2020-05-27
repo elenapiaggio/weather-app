@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import Paper from '@material-ui/core/Paper';
-import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
-import Tollbar from '@material-ui/core/Toolbar';
+import Paper from "@material-ui/core/Paper";
+import AppBar from "@material-ui/core/AppBar";
+import Typography from "@material-ui/core/Typography";
+import Tollbar from "@material-ui/core/Toolbar";
 import LocationList from "./components/LocationList";
 import { Grid, Col, Row } from "react-flexbox-grid";
 import "./App.css";
 import Toolbar from "@material-ui/core/Toolbar";
-import ForecastExtended from './components/ForecastExtended';
+import ForecastExtended from "./components/ForecastExtended";
 
 const cities = [
   "Barcelona, es",
@@ -18,27 +18,30 @@ const cities = [
 ];
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      city: 'New City'
-    }
+      city: null,
+    };
   }
 
   handleSelectednLocation = (city) => {
+    this.setState({
+      city,
+    });
     console.log(`handleSElectionLocation ${city}`);
   };
 
   render() {
-    const {city} = this.state;
+    const { city } = this.state;
     return (
       <div className="App">
         <Grid>
           <Row>
-            <AppBar position='sticky'>
+            <AppBar position="sticky">
               <Toolbar>
-                <Typography variant='title' color='inherit'>
-                    Weather App
+                <Typography variant="h5" color="inherit">
+                  Weather App
                 </Typography>
               </Toolbar>
             </AppBar>
@@ -52,10 +55,12 @@ class App extends Component {
             </Col>
             <Col xs={12} md={6}>
               <Paper elevation={4}>
-                <div className = 'details'>
-                  <ForecastExtended
-                    city = {city}
-                  />
+                <div className="details">
+                  {
+                    !city ? 
+                    <h1> Not city selected yet</h1> : 
+                    <ForecastExtended city={city} />
+                  }
                 </div>
               </Paper>
             </Col>
