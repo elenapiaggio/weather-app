@@ -1,11 +1,13 @@
 .location-list {
   /* background-color: aqua; */
+  max-height: 90vh;
+  overflow: auto;
 }
 
 @media (max-width: 64em) {
   .location-list{
     /* background-color: bisque; */
-    max-height: 30vh;
+    max-height: 55vh;
     overflow: auto;
     margin-bottom: 20px;
   }
