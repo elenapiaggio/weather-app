@@ -2,38 +2,31 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ForecastItem from "./WeatherLocation/ForecastItem/ForecastItem";
 import "./forecastExtended.css";
-import WeatherData from "./WeatherLocation/WeatherData/IndexWeatherData";
 import transformForecast from './services/transformForecast';
-
-// const days = [
-//   "Monday",
-//   "Tuesday",
-//   "Wednesday",
-//   "Thursday",
-//   "Friday",
-//   "Saturday",
-//   "Sunday",
-// ];
-
-// const data = {
-//   temperature: 10,
-//   humidity: 10,
-//   weatherState: 'SUN',
-//   wind: 'normal',
-// }
 
 const api_key = 'cee0c281dcb7298c5e4cb87bc06dca36';
 const url = "http://api.openweathermap.org/data/2.5/forecast";
 
 class ForecastExtended extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       forecastData: null,
     }
   }
 
   componentDidMount() {
+    this.updateCity(this.props.city);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.city !== this.props.city){
+      this.setState({ forecastData: null })
+      this.updateCity(nextProps.city);
+    }
+  }
+
+  updateCity = city => {
     const url_forecast = `${url}?q=${this.props.city}&appid=${api_key}`;
     fetch(url_forecast).then(
       data => (data.json())
@@ -45,13 +38,12 @@ class ForecastExtended extends Component {
         this.setState({ forecastData })
       }
     )
-
   }
 
   renderForecastItemDays(forecastData) {
-    return forecastData.map( (forecast) => (
+    return forecastData.map( (forecast, index) => (
       <ForecastItem 
-        key={`${forecast.weekDay}$forecast.hour`}
+        key={index}
         weekDay={forecast.weekDay} 
         hour={forecast.hour} 
         data={forecast.data}

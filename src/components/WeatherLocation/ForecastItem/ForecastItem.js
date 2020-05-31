@@ -18,7 +18,7 @@ const ForecastItem = ({ weekDay, hour, data }) => {
 }
  
 ForecastItem.propTypes = {
-    city: PropTypes.string.isRequired,
+    weekDay: PropTypes.string.isRequired,
     hour:PropTypes.number.isRequired,
     data: PropTypes.shape({
         temperature: PropTypes.number.isRequired,

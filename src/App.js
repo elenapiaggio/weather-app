@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Paper from "@material-ui/core/Paper";
 import AppBar from "@material-ui/core/AppBar";
 import Typography from "@material-ui/core/Typography";
-import Tollbar from "@material-ui/core/Toolbar";
 import LocationList from "./components/LocationList";
 import { Grid, Col, Row } from "react-flexbox-grid";
 import "./App.css";
