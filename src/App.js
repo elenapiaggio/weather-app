@@ -40,7 +40,7 @@ class App extends Component {
           <Row>
             <AppBar position="sticky">
               <Toolbar>
-                <Typography variant="h5" color="inherit">
+                <Typography variant="h5" >
                   Weather App
                 </Typography>
               </Toolbar>

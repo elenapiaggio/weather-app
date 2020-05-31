@@ -61,7 +61,7 @@ class ForecastExtended extends Component {
 
   renderProgress(){
     return (
-      <h3>Cargando pronóstico extendido ...</h3>
+      <h3>Loading forecast extended ...</h3>
     );
   }
 
@@ -71,7 +71,7 @@ class ForecastExtended extends Component {
 
     return (
       <div>
-        <h2 className="forecast-title">pronostico extendido {city}</h2>
+        <h2 className="forecast-title">{city} - Extended forecast</h2>
         {
           forecastData ?
           this.renderForecastItemDays(forecastData) :
